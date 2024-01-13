@@ -1,18 +1,18 @@
-const Discord = require("discord.js-selfbot-v13"); 
-const amtixdev = new Discord.Client({
-    intents: [Discord.Intents.FLAGS.GUILDS]
-});
+require("dotenv").config();
+
+const discord = require("discord.js-selfbot-v13"); 
+const client = new discord.Client();
 
 client.on('ready', async () => {
   console.log(`${client.user.username} is ready!`);
 })
 
-const { amtixdev } = require("sphinx-run");
-new amtixdev(client, Discord).leveling({
-    channel: '', // تحط اي دي الشانل هنا
-    randomLetters: false, 
-    time: 5000,
-    type: 'eng'
+const {userAccount} = require("sphinx-run");
+new userAccount(client, discord).leveling({
+    channel: "1195813914219393217",
+    randomLetters: false,
+    time: 10000, 
+    type: 'eng',
 });
 
-amtixdev.login(process.env.token);
+client.login(process.env.token);
