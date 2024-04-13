@@ -27,7 +27,7 @@ const {userAccount} = require("sphinx-run");
 const Random = Math.floor(Math.random() * 15) + 10;
 
   new userAccount(client, discord).leveling({
-    channel: "1197852013568995348", // ايدي روم هنا
+    channel: "1228760120377348310", // ايدي روم هنا
     randomLetters: false,
     time: Random * 1000, 
     type: 'eng',
