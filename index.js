@@ -10,7 +10,7 @@ const ONLINE_USERS = [];
 
 if(!process.env.token) throw Error("[TOKEN] No Token was provided!")
 
-for(let i of process.env.token.split("/split/")) {
+for(let i of process.env.token.split("/split/")) {  // هتقسم كل توكن بـ /split/ 
 
 const client = new discord.Client({
   checkUpdate: false
@@ -27,7 +27,7 @@ const {userAccount} = require("sphinx-run");
 const Random = Math.floor(Math.random() * 15) + 10;
 
   new userAccount(client, discord).leveling({
-    channel: "1197852013568995348",
+    channel: "1197852013568995348", // ايدي روم هنا
     randomLetters: false,
     time: Random * 1000, 
     type: 'eng',
